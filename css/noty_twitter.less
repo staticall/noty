@@ -1,0 +1,280 @@
+.noty-bar
+{
+  position: fixed;
+  display: none;
+  z-index: 9999999;
+}
+
+.noty-bar .noty-message
+{
+  text-align: center;
+}
+
+.noty-bar .noty-close
+{
+  cursor: pointer;
+}
+
+.noty-modal
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: @black;
+  z-index: 10000;
+  .opacity(60);
+  display: none;
+  left: 0;
+  top: 0;
+}
+
+ul.noty-cont
+{
+  position: fixed;
+  z-index: 10000000;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  width: 300px;
+}
+
+ul.noty-cont li
+{
+  position: relative;
+  float: left;
+  clear: both;
+  list-style: none;
+  padding: 0px;
+  margin: 10px 0 0 0;
+  width: 300px;
+}
+
+ul.noty-cont.noty-layout-top-left
+{
+  left: 20px;
+  top: 20px;
+}
+
+ul.noty-cont.noty-layout-top-right
+{
+  right: 40px;
+  top: 20px;
+}
+
+ul.noty-cont.noty-layout-bottom-left
+{
+  left: 20px;
+  bottom: 20px;
+}
+
+ul.noty-cont.noty-layout-bottom-right
+{
+  right: 40px;
+  bottom: 20px;
+}
+
+ul.noty-cont.noty-layout-top-right li
+{
+  float: right;
+}
+
+/* LAYOUTS */
+
+.noty-bar.noty-layout-top
+{
+  top: 0;
+  left: 0;
+  width: 100%;
+  .border-radius(0px);
+}
+
+.noty-bar.noty-layout-bottom
+{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .border-radius(0px);
+}
+
+.noty-bar.noty-layout-center
+{
+  top: 40%;
+}
+
+.noty-bar.noty-layout-top-left, .noty-bar.noty-layout-top-right, .noty-bar.noty-layout-bottom-left, .noty-bar.noty-layout-bottom-right
+{
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+
+.noty-bar.noty-layout-topLeft .noty-message, .noty-bar.noty-layout-topRight .noty-message, .noty-bar.noty-layout-bottomLeft .noty-message, .noty-bar.noty-layout-bottomRight .noty-message
+{
+  text-align: left;
+}
+
+.noty-bar.noty-layout-top-center
+{
+  top: 20px;
+}
+
+
+.noty-bar
+{
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  text-shadow: 0 1px 0 @white;
+  font-family: @sansFontFamily;
+}
+
+.noty-custom-container.noty-layout-inline
+{
+  position: relative;
+}
+
+.noty-custom-container.noty-layout-inline .noty-cont.noty-layout-inline
+{
+  position: static;
+}
+
+.noty-custom-container.noty-layout-inline .noty-bar
+{
+  position: static;
+}
+
+.noty-custom-container.noty-layout-inline .noty-bar .noty-message
+{
+  font-size: @baseFontSize;
+  padding: 4px;
+}
+
+.noty-custom-container.noty-layout-inline .noty-bar .noty-message .noty-buttons
+{
+  margin-top: -1px;
+}
+
+.noty-bar .noty-message
+{
+  padding: 8px 14px;
+}
+
+.noty-bar.noty-closable .noty-message
+{
+  padding: 8px 35px 8px 14px;
+}
+
+.noty-bar .noty-message .noty-buttons
+{
+  float: right;
+  margin-top: -5px;
+  margin-left: 4px;
+}
+
+.noty-bar .noty-message .noty-buttons button
+{
+  margin-left: 5px;
+}
+
+.noty-modal
+{
+  .opacity(70);
+}
+
+/* LAYOUTS */
+
+.noty-bar.noty-layout-center, .noty-bar.noty-layout-top-center, .noty-bar.noty-layout-top-left, .noty-bar.noty-layout-top-right, .noty-bar.noty-layout-bottom-left, .noty-bar.noty-layout-bottom-right
+{
+  .border-radius(4px);
+}
+.noty-bar.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  float: none;
+  border-top: 1px solid @grayLighter;
+  margin-left: 0;
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+.noty-bar.noty-layout-center .noty-message .noty-buttons, .noty-bar.noty-layout-top-center .noty-message .noty-buttons
+{
+  margin-left: 15px;
+  margin-top: -2px
+}
+
+/* NOTIFICATION TYPES */
+
+.noty-bar.noty-notification, .noty-bar.noty-note, .noty-bar.noty-debug
+{
+  background-color: @tableBackgroundAccent;
+  border: 1px solid @grayLighter;
+  color: @gray;
+}
+
+.noty-bar.noty-notification.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-notification.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-notification.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-notification.noty-layout-bottom-right .noty-message .noty-buttons,
+.noty-bar.noty-note.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-note.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-note.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-note.noty-layout-bottom-right .noty-message .noty-buttons,
+.noty-bar.noty-debug.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-debug.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-debug.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-debug.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @grayLighter;
+}
+
+.noty-bar.noty-warning
+{
+  background-color: @warningBackground;
+  border: 1px solid @warningBorder;
+  color: @warningText;
+}
+
+.noty-bar.noty-warning.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-warning.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-warning.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-warning.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @warningBorder;
+}
+
+.noty-bar.noty-alert
+{
+  background-color: @warningBackground;
+  border: 1px solid @warningBorder;
+  color: @warningText;
+}
+
+.noty-bar.noty-alert.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-alert.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-alert.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-alert.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @warningBorder;
+}
+
+.noty-bar.noty-error
+{
+  background-color: @errorBackground;
+  border: 1px solid @errorBorder;
+  color: @errorText;
+}
+
+.noty-bar.noty-error.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-error.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-error.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-error.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @errorBorder;
+}
+
+.noty-bar.noty-success
+{
+  background-color: @successBackground;
+  border: 1px solid @successBorder;
+  color: @successText;
+}
+
+.noty-bar.noty-success.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-success.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-success.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-success.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @successBorder;
+}
+
+.noty-bar.noty-information, .noty-bar.noty-info
+{
+  background-color: @infoBackground;
+  border: 1px solid @infoBorder;
+  color: @infoText;
+}
+
+.noty-bar.noty-information.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-information.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-information.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-information.noty-layout-bottom-right .noty-message .noty-buttons,
+.noty-bar.noty-info.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-info.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-info.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-info.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @infoBorder;
+}

@@ -1,0 +1,273 @@
+@baseFontSize: 13px;
+@color_white: #fff;
+@color_white_dark: #eee;
+@color_gray: #ccc;
+@color_gray_dark: #555;
+@color_black: #222;
+
+@color_warning_background: #ffeaa8;
+@color_warning_border: #ffc237;
+@color_warning_text: #826200;
+@color_error_background: red;
+@color_error_border: darkred;
+@color_error_text: @color_white;
+@color_success_background: lightgreen;
+@color_success_border: darkgreen;
+@color_success_text: #060;
+@color_info_background: #57b7e2;
+@color_info_border: #0b90c4;
+@color_info_text: @color_white;
+
+.border-radius(@radius)
+{
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.opacity(@opacity)
+{
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}
+
+.box-shadow(@shadow)
+{
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+/* CORE STYLES*/
+.noty-bar.noty-theme-default
+{
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAoCAYAAAAPOoFWAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPZJREFUeNq81tsOgjAMANB2ov7/7ypaN7IlIwi9rGuT8QSc9EIDAsAznxvY4pXPKr05RUE5MEVB+TyWfCEl9LZApYopCmo9C4FKSMtYoI8Bwv79aQJU4l6hXXCZrQbokJEksxHo9KMOgc6w1atHXM8K9DVC7FQnJ0i8iK3QooGgbnyKgMDygBWyYFZoqx4qS27KqLZJjA1D0jK6QJcYEQEiWv9PGkTsbqxQ8oT+ZtZB6AkdsJnQDnMoHXHLGKOgDYuCWmYhEERCI5gaamW0bnHdA3k2ltlIN+2qKRyCND0bhqSYCyTB3CAOc4WusBEIpkeBuPgJMAAX8Hs1NfqHRgAAAABJRU5ErkJggg==') repeat-x scroll left top @color_white;
+}
+
+.noty-custom-container.noty-theme-default.noty-layout-inline
+{
+  position: relative;
+}
+
+.noty-custom-container.noty-theme-default.noty-layout-inline .noty-cont.noty-layout-inline
+{
+  position: static;
+}
+
+.noty-custom-container.noty-theme-default.noty-layout-inline .noty-bar
+{
+  border-width: 1px;
+  border-style: solid;
+  position: static;
+  .border-radius(4px);
+  .box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.noty-custom-container.noty-theme-default.noty-layout-inline .noty-bar .noty-message
+{
+  font-size: @baseFontSize;
+  padding: 4px;
+}
+
+.noty-custom-container.noty-theme-default.noty-layout-inline .noty-bar .noty-message .noty-buttons
+{
+  margin-top: -1px;
+}
+
+.noty-bar.noty-theme-default .noty-message
+{
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  width: auto;
+}
+
+.noty-bar.noty-theme-default.noty-closable .noty-message
+{
+  padding: 8px 34px 8px 14px;
+}
+
+.noty-bar.noty-theme-default .noty-message .noty-buttons
+{
+  float: right;
+  font-size: 13px;
+  margin-top: -4px;
+  margin-left: 4px;
+}
+
+.noty-bar.noty-theme-default .noty-message .noty-buttons button
+{
+  margin-left: 5px;
+}
+
+.noty-bar.noty-theme-default .noty-close
+{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAORJREFUeNq0lU0OgjAQhRm5gUl3rLyBB3BDQjwI4TDcgmu4NqwNJGxdueqWA4zzCJoxtvxoeckLzbz2C5ShEDNHDiXis/gkPooPY/0uvomv4ov48bUSQGUSF+Ka51WPc0kzNGwvLnm9ynHtB5B+hGkoaWDB/6t4AZOFe7ZkTxMAc1dqreU0TbnrunetbVvOsmzIPMoBrFwJYGgCY8wAgjFGDZlHFYCNK9EAXPUYmUcNgL0v1dAFMKjfRSsVx/H0hC0eOfhLmWwbfTcYozbXNsEbO/int8nhEPz4CnbAUuhfwFOAAQAA48KKOuexjwAAAABJRU5ErkJggg==');
+  width: 20px;
+  height: 20px;
+}
+
+.noty-modal.noty-theme-default
+{
+  .opacity(70);
+}
+
+/* LAYOUTS */
+.noty-bar.noty-theme-default.noty-layout-top
+{
+  border-bottom: 3px solid @color_white_dark;
+}
+
+.noty-bar.noty-theme-default.noty-layout-bottom
+{
+  border-top: 3px solid @color_white_dark;
+}
+
+.noty-bar.noty-theme-default.noty-layout-center .noty-close
+{
+  top: 8px;
+}
+
+.noty-bar.noty-theme-default.noty-layout-center .noty-message .noty-buttons
+{
+  margin-top: -2px
+}
+
+.noty-bar.noty-theme-default.noty-layout-center, .noty-bar.noty-theme-default.noty-layout-top-left, .noty-bar.noty-theme-default.noty-layout-top-right, .noty-bar.noty-theme-default.noty-layout-bottom-left, .noty-bar.noty-theme-default.noty-layout-bottom-right
+{
+  border: 1px solid @color_white_dark;
+  .border-radius(5px);
+  .box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+.noty-bar.noty-theme-default.noty-layout-center .noty-message, .noty-bar.noty-theme-default.noty-layout-top-left .noty-message, .noty-bar.noty-theme-default.noty-layout-top-right .noty-message, .noty-bar.noty-theme-default.noty-layout-bottom-left .noty-message, .noty-bar.noty-theme-default.noty-layout-bottom-right .noty-message
+{
+  font-size: @baseFontSize;
+  font-weight: normal;
+}
+
+.noty-bar.noty-theme-default.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  float: none;
+  border-top: 1px solid @color_gray;
+  margin-left: 0;
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: right;
+}
+
+.noty-bar.noty-theme-default.noty-layout-top-center
+{
+  .border-radius(4px);
+  .box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.noty-bar.noty-theme-default.noty-layout-top-center .noty-message
+{
+  font-weight: normal;
+  font-size: @baseFontSize;
+}
+
+.noty-bar.noty-theme-default.noty-layout-top-center .noty-close
+{
+  top: 50%;
+  margin-top: -10px;
+  .border-radius(10px);
+}
+
+.noty-bar.noty-theme-default.noty-layout-top-center.noty-success
+{
+  border: 1px solid @color_success_border;
+}
+
+.noty-bar.noty-theme-default.noty-layout-top-center .noty-message .noty-buttons
+{
+  margin-left: 15px;
+  margin-top: 0px
+}
+
+/* NOTIFICATION TYPES */
+.noty-bar.noty-theme-default.noty-notification, .noty-bar.noty-theme-default.noty-note, .noty-bar.noty-theme-default.noty-debug
+{
+  background-color: @color_white;
+  border-color: @color_gray;
+  color: @color_gray_dark;
+  text-shadow: none;
+}
+
+.noty-bar.noty-theme-default.noty-notification.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-notification.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-notification.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-notification.noty-layout-bottom-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-note.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-note.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-note.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-note.noty-layout-bottom-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-debug.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-debug.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-debug.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-debug.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @color_gray;
+}
+
+.noty-bar.noty-theme-default.noty-warning
+{
+  background-color: @color_warning_background;
+  border-color: @color_warning_border;
+  color: @color_warning_text;
+  text-shadow: none;
+}
+
+.noty-bar.noty-theme-default.noty-warning.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-warning.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-warning.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-warning.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @color_warning_border;
+}
+
+.noty-bar.noty-theme-default.noty-alert
+{
+  background-color: @color_white;
+  border-color: @color_gray;
+  color: @color_gray_dark;
+  text-shadow: none;
+}
+
+.noty-bar.noty-theme-default.noty-alert.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-alert.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-alert.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-alert.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @color_gray;
+}
+
+.noty-bar.noty-theme-default.noty-error
+{
+  background-color: @color_error_background;
+  color: @color_error_text;
+  border-color: @color_error_border;
+  text-shadow: none;
+}
+
+.noty-bar.noty-theme-default.noty-error .noty-message
+{
+  font-weight: bold;
+}
+
+.noty-bar.noty-theme-default.noty-error.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-error.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-error.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-error.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @color_error_border;
+}
+
+.noty-bar.noty-theme-default.noty-success
+{
+  background-color: @color_success_background;
+  color: @color_success_text;
+  border-color: @color_success_border;
+  text-shadow: none;
+}
+
+.noty-bar.noty-theme-default.noty-success.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-success.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-success.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-success.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @color_success_border;
+}
+
+.noty-bar.noty-theme-default.noty-information
+{
+  background-color: @color_info_background;
+  border-color: @color_info_border;
+  color: @color_info_text;
+  text-shadow: none;
+}
+
+.noty-bar.noty-theme-default.noty-information.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-information.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-information.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-information.noty-layout-bottom-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-info.noty-layout-top-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-info.noty-layout-top-right .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-info.noty-layout-bottom-left .noty-message .noty-buttons, .noty-bar.noty-theme-default.noty-info.noty-layout-bottom-right .noty-message .noty-buttons
+{
+  border-color: @color_info_border;
+}

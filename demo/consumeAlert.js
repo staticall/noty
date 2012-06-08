@@ -3,7 +3,7 @@ $(document).ready(function(){
   var wait = false;
   
   window.alert = function(text){
-    noty({layout : 'topRight', theme : 'noty_theme_default', type : 'success', text: text, timeout : 1000,
+    noty({layout : 'top-right', theme : 'noty-theme-default', type : 'success', text: text, timeout : 1000,
       onShow :function(){
         console.log(new Date().getTime()+" : start show alert");
       },onShown :function(){
@@ -21,12 +21,12 @@ $(document).ready(function(){
   console.log("after call");*/
   
   
-  alert("bonjour 1");
-  $.noty.consumeAlert({layout : 'topRight', type : 'success'});
-  alert("bonjour 2");
-  $.noty.consumeAlert({layout : 'top', type : 'alert'});
-  alert("bonjour 3");
+  alert("hi 1");
+  $.noty.consumeAlert({layout : 'top-right', type: 'success'});
+  alert("hi 2");
+  $.noty.consumeAlert({layout : 'top', type: 'alert'});
+  alert("hi 3");
   $.noty.stopConsumeAlert();
-  alert("bonjour 4");
+  alert("hi 4");
   
 });

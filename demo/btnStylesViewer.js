@@ -1,9 +1,8 @@
 $(document).ready(function(){
-  notyAlertWithButtons('topLeft', 'noty_theme_default');
-  notyAlertWithButtons('topLeft', 'noty_theme_twitter');
-  notyAlertWithButtons('topRight', 'noty_theme_mitgux');
-  notyAlertWithButtons('bottomLeft', 'noty_theme_facebook');
-  notyAlertWithButtons('bottomRight', 'noty_theme_growl');
+  notyAlertWithButtons('top-left', 'noty-theme-default');
+  notyAlertWithButtons('top-left', '');
+  notyAlertWithButtons('bottom-left', 'noty-theme-facebook');
+  notyAlertWithButtons('bottom-right', 'noty-theme-growl');
 });
 
 function notyAlertWithButtons(layout, theme){
