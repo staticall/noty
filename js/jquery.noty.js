@@ -362,7 +362,7 @@ function notyPrepareOptions(arg__options_or_text)
     text = arg__options_or_text[0];
     type = arg__options_or_text[1];
 
-    if($.inArray(type, _avail_types) == -1) type = 'info';
+    if(typeof type == 'undefined' || !type || $.inArray(type, _avail_types) == -1) type = 'info';
 
     options = {
       "text": text,
@@ -371,8 +371,8 @@ function notyPrepareOptions(arg__options_or_text)
   }
   else
   {
-    if(typeof arg__options_or_text == 'object') options = arg__options_or_text[0];
-    else if(typeof arg__options_or_text == 'string') options = {
+    if(typeof arg__options_or_text[0] == 'object') options = arg__options_or_text[0];
+    else if(typeof arg__options_or_text[0] == 'string') options = {
       "text": arg__options_or_text[0]
     };
   }
